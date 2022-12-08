@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  position: fixed; 
+  top: 0;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  font-family: 'Bungee', sans-serif;
+  font-size: xx-large;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.writeTweetHeader {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.writeTweetHeader i {
+  color: red;
+}
+
+
