@@ -12,6 +12,11 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+!["A view of tweets created."](https://github.com/iliacodes/tweeter/blob/master/docs/tweetList.png)
+!["A view of the page in a browser"](https://github.com/iliacodes/tweeter/blob/master/docs/tweeterBrowserPage.png)
+!["A view of the page in a mobile view along with a relevant error message."](https://github.com/iliacodes/tweeter/blob/master/docs/tweeterMobileView.png)
+
+
 ## Dependencies
 
 - Express
