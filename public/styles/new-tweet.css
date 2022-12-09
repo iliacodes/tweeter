@@ -25,13 +25,13 @@ button {
 }
 
 textarea {
-    border-style: none;
-    background-color: #f4f1ec;
-    width: 100%;
-    border-bottom-style: solid;
-    border-bottom-width: 5px;
-    border-bottom-color: #4056A1;
-    outline: none;
+  border-style: none;
+  background-color: #f4f1ec;
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color: #4056A1;
+  outline: none;
 }
 
 .letterCounter {
@@ -41,5 +41,19 @@ textarea {
 }
 
 .counterColor {
+  color: crimson;
+}
+
+.errorTooManyChars {
+  border: 3.5px solid crimson;
+  display: none;
+  padding: 10px;
+  color: crimson;
+}
+
+.errorNoChars {
+  border: 3.5px solid crimson;
+  display: none;
+  padding: 10px;
   color: crimson;
 }
