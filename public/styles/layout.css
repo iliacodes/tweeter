@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -33,18 +36,17 @@ body {
   align-items: center;
   width: 90%;
   margin: 1em auto;
-  /* margin-top: -160px; */
   background-color: #f4f1ec;
 }
 
-@media screen and (min-width: 1024px ){
+@media screen and (min-width: 1024px) {
   body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-
   }
+
   .container {
     align-items: flex-start;
     width: 90%;
@@ -52,6 +54,7 @@ body {
     padding: 1em;
   }
 }
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

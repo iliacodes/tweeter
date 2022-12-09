@@ -5,33 +5,10 @@
  */
 $(document).ready(function() {
   const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
+
   ];
 
-  // const $tweet = createTweetElement(tweetData);
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -39,10 +16,12 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
+      //prepending tweet for chronological order.
       $(".tweets-container").prepend(createTweetElement(tweet));
     }
   };
 
+  // template for new tweet.
   const createTweetElement = function(tweet) {
     return $(`<article class="tweet">
     <header>
@@ -70,19 +49,21 @@ $(document).ready(function() {
     const data = $(this).serialize();
     const chars = $("#tweet-text").val().length;
 
+    //error handling.
     if (chars > 140) {
+      // throws error if there are too many chars.
       return $(".errorTooManyChars").fadeIn(1000);
-      // $(alert("Too many characters. Please create tweets below 140 characters."));
     }
     if (chars < 1) {
+      // throws error if there are no chars.
       return $('.errorNoChars').fadeIn(1000);
-      // $(alert("Please input what you would like to tweet."));
+
     }
 
     $.post('/tweets', data).then(function() {
       loadTweets();
       $('.tweets-container').empty();
-    })
+    });
   });
 
   const loadTweets = function() {
@@ -93,8 +74,7 @@ $(document).ready(function() {
       renderTweets(render);
     });
   };
-  
+
   loadTweets();
-  // renderTweets(data);
 })
 

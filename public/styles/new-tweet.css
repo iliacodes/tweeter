@@ -44,6 +44,7 @@ textarea {
   color: crimson;
 }
 
+/* Errors below */
 .errorTooManyChars {
   border: 3.5px solid crimson;
   display: none;
