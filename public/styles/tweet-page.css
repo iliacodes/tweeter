@@ -42,3 +42,11 @@ article.tweet footer div {
   justify-content: space-around;
   width: 15%;
 }
+
+article:hover {
+  box-shadow: 10px 10px 5px #4056A1;
+}
+
+.icons:hover {
+  color: #4056A1;
+}
