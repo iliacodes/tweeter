@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 
   $('#tweet-form').on('submit', function(event) {
-    event.preventDefault();
+    // event.preventDefault();
     const data = $(this).serialize();
     const chars = $("#tweet-text").val().length;
 
