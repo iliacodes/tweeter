@@ -55,10 +55,10 @@ $(document).ready(function() {
     <p class="tweet-content">${escape(tweet.content.text)}</p>
     <footer>
       <p>${timeago.format(tweet.created_at)}</p>
-      <div class="icons">
-        <i class="fa-solid fa-flag"></i>
-        <i class="fa-solid fa-retweet"></i>
-        <i class="fa-solid fa-heart"></i>
+      <div>
+        <i class="icons fa-solid fa-flag"></i>
+        <i class="icons fa-solid fa-retweet"></i>
+        <i class="icons fa-solid fa-heart"></i>
       </div>
     </footer>
   </article>`);
