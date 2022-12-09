@@ -21,13 +21,14 @@ $(document).ready(function() {
       "user": {
         "name": "Descartes",
         "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
+        "handle": "@rd"
+      },
       "content": {
         "text": "Je pense , donc je suis"
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
   // const $tweet = createTweetElement(tweetData);
 
@@ -60,15 +61,18 @@ $(document).ready(function() {
 
 
   $('#tweet-form').on('submit', function(event) {
-    console.log('Submitting the form.');
     event.preventDefault();
-
     const data = $(this).serialize();
-    console.log(data);
+    const chars = $("#tweet-text").val().length;
+
+    if (chars > 140) {
+      $(alert("Too many characters. Please create tweets below 140 characters."));
+    }
+    else if (chars < 1) {
+      $(alert("Please input what you would like to tweet."));
+    }
+
     $.post('/tweets', data);
-
-    
-
   });
 
   const loadTweets = function() {
