@@ -66,18 +66,23 @@ $(document).ready(function() {
 
 
   $('#tweet-form').on('submit', function(event) {
-    // event.preventDefault();
+    event.preventDefault();
     const data = $(this).serialize();
     const chars = $("#tweet-text").val().length;
 
     if (chars > 140) {
-      $(alert("Too many characters. Please create tweets below 140 characters."));
+      return $(".errorTooManyChars").fadeIn(1000);
+      // $(alert("Too many characters. Please create tweets below 140 characters."));
     }
-    else if (chars < 1) {
-      $(alert("Please input what you would like to tweet."));
+    if (chars < 1) {
+      return $('.errorNoChars').fadeIn(1000);
+      // $(alert("Please input what you would like to tweet."));
     }
 
-    $.post('/tweets', data);
+    $.post('/tweets', data).then(function() {
+      loadTweets();
+      $('.tweets-container').empty();
+    })
   });
 
   const loadTweets = function() {
@@ -88,7 +93,7 @@ $(document).ready(function() {
       renderTweets(render);
     });
   };
-
+  
   loadTweets();
   // renderTweets(data);
 })
